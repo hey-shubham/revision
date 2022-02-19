@@ -44,7 +44,9 @@
 // }
 
 
- console.log("Something");
- console.error("Somethind");
- console.table([1, 2, 3, 4, 5]);
- console.warn("Something");
+// -------- check on browser(html file)---------
+
+//  console.log("Something");
+//  console.error("Somethind");
+//  console.table([1, 2, 3, 4, 5]);
+//  console.warn("Something");

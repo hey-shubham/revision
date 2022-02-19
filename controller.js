@@ -29,3 +29,23 @@ module.exports.login = async function (req, res) {
     res.json("User doesn't exist");
   }
 };
+
+module.exports.forgetPass = async function (req, res) {
+    // console.log();
+    console.log(req);
+    let reso = await userModel.updateOne({ email: req.body.email }, { password: req.body.password })
+    if (reso) {
+        res.json("Update Success");
+    } else {
+        res.json("Not updated");
+    }
+}
+module.exports.deleteUser = async function (req, res) {
+    let reso = await userModel.deleteOne({ email: req.body.email })
+    if (reso) {
+        res.json("Delete Success");
+    } else {
+        res.json("Not Deleted");
+    }
+    
+}
